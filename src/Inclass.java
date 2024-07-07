@@ -131,15 +131,17 @@ public class Inclass {
 		System.out.println("Enter code: ");
 		String input = sc.nextLine();
 		String[] itemCode = { "A132-100", "B134-200" };
+		String result = "";
 		for (int i = 0; i < itemCode.length; i++) {
-			String[] split = itemCode[i].split("");
-			if (split[0].equalsIgnoreCase(input)) {
-				System.out.println("The Price is : " + split[1]);
-				break;
-			}else {
-				System.out.println("Enter a walid group");
-				break;
+			String[] split = itemCode[i].split("-");
+			if (input.equalsIgnoreCase(split[0])) {
+				result = "The Price is : " + split[1];
 			}
+		}
+		if(!result.isBlank()) {
+			System.out.println(result);
+		}else {
+			System.out.println("Enter a valid Code");
 		}
 	}
 }
