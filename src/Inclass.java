@@ -144,4 +144,15 @@ public class Inclass {
 			System.out.println("Enter a valid Code");
 		}
 	}
-}
+	void gradeMessage () {
+		System.out.println("Enter your Grade : ");
+		String grade = sc.next();
+		String message = "";
+		switch(grade) {
+		case "A":
+			
+		case "A":
+			
+		}
+	}
+ }
